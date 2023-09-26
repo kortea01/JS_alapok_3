@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. feladat</title>
+</head>
+<body>
+    <div>
+        <label for="szoveg">Szöveg</label>
+        <input type="text" id="szöveg">
+    </div>
+     <script>
+        const szam = Math.round(Math.random() * 100);
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            urlap.addEventListener("submit", (event) => {
+                event.preventDefault();
+
+                var tipp = urlap["tipp"].value;
+        
+                function vizsgalat() {
+                   
+                    if (tipp > x) {
+                        document.getElementById("message").innerHTML = "KISEBB";
+                    } else if (tipp < x) {
+                        document.getElementById("message").innerHTML = "NAGYOBB";
+                    } else {
+                        document.getElementById("message").innerHTML = "TALÁLT!";
+                    }
+
+                }
+                vizsgalat();
+            });
+        });
+    </script>
+</body>
+</html>
