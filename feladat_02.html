@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. feladat</title>
+</head>
+<body>
+    <div >
+        <div>
+            <label for="a">az "a" oldal hossza:</label>
+            <input type="number" id="a" step="any" placeholder="Add meg az a oldal hosszát"><br>
+        </div>
+        <br>
+        <div>
+            <label for="b">a "b" oldal hossza:</label>
+            <input type="number" id="b" step="any" placeholder="Add meg a b oldal hosszát"><br>
+        </div>
+        <br>
+        <div>
+            <label for="c">a "c" oldal hossza:</label>
+            <input type="number" id="c" step="any" placeholder="Add meg a c oldal hosszát"><br>
+        </div>
+    </div>
+    <button onclick="szamol()">Számolás</button>
+    <script>
+        function szamol() {
+            const a = document.getElementById('a').value;
+            const b = document.getElementById('b').value;
+            const c = document.getElementById('c').value;
+
+            
+            if (a + b <= c || a + c <= b || b + c <= a) {
+                document.getElementById('eredmeny').innerHTML = "Ezek az oldalhosszak nem alkothatnak háromszöget!";
+                return;
+            }
+
+            const s = (a + b + c) / 2;
+            const terulet = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+            const kerulet = a + b + c;
+
+            
+        }
+    </script>
+
+
+</body>
+</html>
